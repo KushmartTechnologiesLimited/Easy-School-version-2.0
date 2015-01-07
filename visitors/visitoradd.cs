@@ -34,7 +34,7 @@ namespace ESIS.visitors
             //This is my connection string i have assigned the database file address path
             string MyConnection2 = "datasource=localhost;port=3306;username=root";
             //This is my insert query in which i am taking input from the user through windows forms
-            string Query = "insert into school details.visitorpass(visitorname,visitorcardnumber,address,contactnumber,numberofvisitors,visitpurpose,meetingwith,visitdate,intime,outtime,comments) values('"+this.name.Text+"','" +this.card.Text+ "','" +this.addrs.Text+ "','" +this.cont.Text+"','"+this.nume.Text+ "','"+this.purpose.Text+"','" +this.person.Text+ "','" +this.date.Text+"','" + this.intime.Text+"','" +this.outtime.Text+"','" +this.comments.Text+"');";
+            string Query = "insert into schoolfees.visitorpass(visitorname,visitorcardnumber,address,contactnumber,numberofvisitors,visitpurpose,meetingwith,visitdate,intime,outtime,comments) values('"+this.name.Text+"','" +this.card.Text+ "','" +this.addrs.Text+ "','" +this.cont.Text+"','"+this.nume.Text+ "','"+this.purpose.Text+"','" +this.person.Text+ "','" +this.date.Text+"','" + this.intime.Text+"','" +this.outtime.Text+"','" +this.comments.Text+"');";
             //This is  MySqlConnection here i have created the object and pass my connection string.
             MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
             //This is command class which will handle the query and connection object.

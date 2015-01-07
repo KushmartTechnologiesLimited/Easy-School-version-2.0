@@ -52,7 +52,7 @@ namespace ESIS.Base_classes
         }
         public bool alphaNumericCheck(String text)
         {
-            Regex r = new Regex("^[a-zA-Z0-9]*$");
+            Regex r = new Regex("^[a-z A-Z0-9]*$");
             if (r.IsMatch(text))
             {
                 return true;

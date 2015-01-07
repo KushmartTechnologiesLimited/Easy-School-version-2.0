@@ -149,6 +149,7 @@
             // 
             // feesItemComboBox
             // 
+            this.feesItemComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.feesItemComboBox.FormattingEnabled = true;
             this.feesItemComboBox.Location = new System.Drawing.Point(522, 0);
             this.feesItemComboBox.Name = "feesItemComboBox";
@@ -177,7 +178,7 @@
             // 
             // clearButton
             // 
-            this.clearButton.Location = new System.Drawing.Point(1295, 3);
+            this.clearButton.Location = new System.Drawing.Point(1273, 1);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(75, 21);
             this.clearButton.TabIndex = 11;

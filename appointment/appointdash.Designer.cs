@@ -38,11 +38,16 @@
             // 
             // grid1
             // 
+            this.grid1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grid1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grid1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.grid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grid1.Location = new System.Drawing.Point(0, 24);
             this.grid1.Name = "grid1";
-            this.grid1.Size = new System.Drawing.Size(827, 311);
+            this.grid1.Size = new System.Drawing.Size(934, 236);
             this.grid1.TabIndex = 1;
             this.grid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid1_CellContentClick);
             // 
@@ -53,7 +58,7 @@
             this.modifyToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(827, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(934, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -74,13 +79,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(827, 335);
+            this.ClientSize = new System.Drawing.Size(934, 257);
             this.Controls.Add(this.grid1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "appointdash";
             this.Text = "appointdash";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.appointdash_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).EndInit();
             this.menuStrip1.ResumeLayout(false);

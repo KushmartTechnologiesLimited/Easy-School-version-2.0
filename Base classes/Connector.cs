@@ -111,7 +111,70 @@ namespace ESIS.Base_classes
                 this.CloseConnection();
             }
         }
+        public List<string>[] feesDetails(string query)
+        {
+            List<string>[] list = new List<string>[4];
+            list[0] = new List<string>();
+            list[1] = new List<string>();
+            list[2] = new List<string>();
+            list[3] = new List<string>();
+            //list = null;
 
+            if (this.OpenConnection() == true)
+            {
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+                if (!dataReader.Read())
+                {
+                    list = null;
+                    MessageBox.Show("Student by that admission number not found!");
+                    //close Data Reader
+                    dataReader.Close();
+
+                    //close Connection
+                    this.CloseConnection();
+                }
+                else
+                {
+                    dataReader.Close();
+
+                    //close Connection
+                    this.CloseConnection();
+                    if (this.OpenConnection() == true)
+                    {
+                        cmd = new MySqlCommand(query, connection);
+                        //Create a data reader and Execute the command
+                        dataReader = cmd.ExecuteReader();
+                        //Read the data and store them in the list
+                        while (dataReader.Read())
+                        {
+                            list[0].Add(dataReader["StudentsName"] + "");
+                            list[1].Add(dataReader["surname"] + "");
+                            list[2].Add(dataReader["academicLevel"] + "");
+                            list[3].Add(dataReader["balance"] + "");
+                            
+                        }
+                    }
+                    
+
+                    //close Data Reader
+                    dataReader.Close();
+
+                    //close Connection
+                    this.CloseConnection();
+                }
+            }//end inner else
+            else
+            {
+                MessageBox.Show("Could not retrieve the required data");
+                list = null;
+            }
+                //return list to be displayed
+                return list;
+            
+        }
         //Update statement
         public void Update()
         {
